@@ -11,6 +11,12 @@ export class AppComponent {
   amount: number = 0.0;
   height: number = 0.0;
 
+  car = {
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2000,
+  };
+
   onNameChange(event: Event) {
     const target = event.target as HTMLInputElement;
     this.name = target.value;
