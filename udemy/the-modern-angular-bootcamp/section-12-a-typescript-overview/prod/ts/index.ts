@@ -6,3 +6,6 @@ const nothingHere: null = null;
 const noDefinition: undefined = undefined;
 
 let otherName = 'Marcelo';
+
+const sentence = 'This is a sentence';
+sentence.includes('is');
