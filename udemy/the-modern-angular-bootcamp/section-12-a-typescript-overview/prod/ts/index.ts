@@ -25,3 +25,17 @@ function add2(a: number, b: number): number {
 const joinStrings2 = function (a: string, b: string): string {
   return a + b;
 };
+
+const post: { title: string; daysOld: number; published: boolean } = {
+  title: 'Latest TypeScript News',
+  daysOld: 10,
+  published: true,
+};
+
+const printPost = (postToPrint: {
+  title: string;
+  daysOld: number;
+  published: boolean;
+}) => {
+  return `${postToPrint.title} (${postToPrint.daysOld} days old)`;
+};
