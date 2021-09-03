@@ -45,8 +45,8 @@ const printPost = (postToPrint: PostGatekeeper) => {
 printPost(post);
 
 class Car {
-  color: string;
-  year: number;
+  private color: string;
+  private year: number;
 
   constructor(color: string, year: number) {
     this.color = color;
@@ -54,10 +54,15 @@ class Car {
   }
 
   drive() {
-    console.log('Vroom');
+    this.putInGear();
+    this.pressPedal();
+    this.turnWheel();
   }
+
+  private putInGear() {}
+  private pressPedal() {}
+  private turnWheel() {}
 }
 
 const myCar = new Car('red', 2000);
 myCar.drive();
-console.log(myCar.color, myCar.year);
