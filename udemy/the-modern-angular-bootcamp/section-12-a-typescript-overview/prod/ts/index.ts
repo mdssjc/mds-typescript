@@ -26,16 +26,20 @@ const joinStrings2 = function (a: string, b: string): string {
   return a + b;
 };
 
-const post: { title: string; daysOld: number; published: boolean } = {
+interface PostGatekeeper {
+  title: string;
+  daysOld: number;
+  published: boolean;
+}
+
+const post: PostGatekeeper = {
   title: 'Latest TypeScript News',
   daysOld: 10,
   published: true,
 };
 
-const printPost = (postToPrint: {
-  title: string;
-  daysOld: number;
-  published: boolean;
-}) => {
+const printPost = (postToPrint: PostGatekeeper) => {
   return `${postToPrint.title} (${postToPrint.daysOld} days old)`;
 };
+
+printPost(post);
