@@ -45,10 +45,7 @@ const printPost = (postToPrint: PostGatekeeper) => {
 printPost(post);
 
 class Car {
-  private color: string;
-  private year: number;
-
-  constructor(color: string, year: number) {
+  constructor(private color: string, private year: number) {
     this.color = color;
     this.year = year;
   }
