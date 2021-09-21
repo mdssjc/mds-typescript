@@ -1,3 +1,5 @@
+import { Car } from "./Car";
+
 const myName: string = 'Marcelo';
 const myAge: number = 37;
 const yes: boolean = true;
@@ -47,24 +49,6 @@ printPost(post);
 const Component = (target: any) => {
   console.log(target);
 };
-
-@Component
-class Car {
-  constructor(private color: string, private year: number) {
-    this.color = color;
-    this.year = year;
-  }
-
-  drive() {
-    this.putInGear();
-    this.pressPedal();
-    this.turnWheel();
-  }
-
-  private putInGear() {}
-  private pressPedal() {}
-  private turnWheel() {}
-}
 
 const myCar = new Car('red', 2000);
 myCar.drive();
