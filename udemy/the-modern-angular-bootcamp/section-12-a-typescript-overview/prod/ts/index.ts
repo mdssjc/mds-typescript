@@ -44,6 +44,11 @@ const printPost = (postToPrint: PostGatekeeper) => {
 
 printPost(post);
 
+const Component = (target: any) => {
+  console.log(target);
+}
+
+@Component
 class Car {
   constructor(private color: string, private year: number) {
     this.color = color;
