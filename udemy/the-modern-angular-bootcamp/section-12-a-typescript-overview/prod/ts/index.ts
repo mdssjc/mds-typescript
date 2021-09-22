@@ -1,5 +1,3 @@
-import { Car } from "./Car";
-
 const myName: string = 'Marcelo';
 const myAge: number = 37;
 const yes: boolean = true;
@@ -50,5 +48,22 @@ const Component = (target: any) => {
   console.log(target);
 };
 
-const myCar = new Car('red', 2000);
-myCar.drive();
+interface Driveable {
+  speed: number;
+
+  drive(): string;
+}
+
+class Car implements Driveable {
+  speed = 10;
+
+  drive() {
+    return `I'm driving at ${this.speed}`;
+  }
+}
+
+const myCar = new Car();
+const startDriving = (vehicle: Driveable) => {
+  vehicle.drive();
+};
+startDriving(myCar);
