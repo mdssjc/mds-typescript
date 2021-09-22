@@ -67,3 +67,23 @@ const startDriving = (vehicle: Driveable) => {
   vehicle.drive();
 };
 startDriving(myCar);
+
+class NumberHolder {
+  value: number;
+}
+class StringHolder {
+  value: string;
+}
+class BooleanHolder {
+  value: boolean;
+}
+
+class ValueHolder<TypeForValueProperty> {
+  value: TypeForValueProperty;
+}
+
+const numberHolder = new ValueHolder<number>();
+numberHolder.value = 10;
+
+const stringHolder = new ValueHolder<string>();
+stringHolder.value = 'A String';
