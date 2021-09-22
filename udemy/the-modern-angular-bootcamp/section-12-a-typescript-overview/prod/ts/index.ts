@@ -78,8 +78,8 @@ class BooleanHolder {
   value: boolean;
 }
 
-class ValueHolder<TypeForValueProperty> {
-  value: TypeForValueProperty;
+class ValueHolder<T> {
+  value: T;
 }
 
 const numberHolder = new ValueHolder<number>();
@@ -87,3 +87,21 @@ numberHolder.value = 10;
 
 const stringHolder = new ValueHolder<string>();
 stringHolder.value = 'A String';
+
+const numberWrapper = (value: number): number[] => {
+  return [value];
+};
+const stringWrapper = (value: string): string[] => {
+  return [value];
+};
+const booleanWrapper = (value: boolean): boolean[] => {
+  return [value];
+};
+
+const valueWrapper = <T>(value: T): T[] => {
+  return [value];
+};
+
+const value = valueWrapper<number>(10);
+valueWrapper<boolean>(true);
+valueWrapper<string>('word');
