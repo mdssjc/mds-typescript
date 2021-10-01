@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./page-list.component.css'],
 })
 export class PageListComponent implements OnInit {
-  @Input() pages = [];
+  @Input() pages: any = [];
 
   constructor() {}
 
