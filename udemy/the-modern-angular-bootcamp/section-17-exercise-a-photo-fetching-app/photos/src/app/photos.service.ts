@@ -8,13 +8,10 @@ export class PhotosService {
   constructor(private http: HttpClient) {}
 
   getPhoto() {
-    return (
-      this.http.get('https//api.unsplash.com/photos/random'),
-      {
-        headers: {
-          Authorization: 'Client-ID ---',
-        },
-      }
-    );
+    return this.http.get('https://api.unsplash.com/photos/random', {
+      headers: {
+        Authorization: 'Client-ID ---',
+      },
+    });
   }
 }
