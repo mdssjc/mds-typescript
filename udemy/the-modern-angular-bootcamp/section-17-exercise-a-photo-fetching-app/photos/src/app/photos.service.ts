@@ -11,7 +11,7 @@ interface UnsplashResponse {
   providedIn: 'root',
 })
 export class PhotosService {
-  private appkey = '---';
+  private appkey = 'key';
 
   constructor(private http: HttpClient) {}
 
