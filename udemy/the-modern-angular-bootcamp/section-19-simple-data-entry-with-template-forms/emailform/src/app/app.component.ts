@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   email: string = '';
+
+  onSubmit(): void {
+    console.log(this.email);
+  }
 }
