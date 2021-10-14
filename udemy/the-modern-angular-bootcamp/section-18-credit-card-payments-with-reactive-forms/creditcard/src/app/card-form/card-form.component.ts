@@ -19,4 +19,8 @@ export class CardFormComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  onSubmit(): void {
+    console.log('Form was submitted');
+  }
 }
