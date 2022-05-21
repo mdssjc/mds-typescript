@@ -1,0 +1,8 @@
+.warning {
+  margin: 1px;
+  padding: 2px;
+  color: orangered;
+  background-color: orange;
+  border: 1px solid orange;
+  text-align: center;
+}
