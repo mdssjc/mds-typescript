@@ -27,6 +27,10 @@ export class ServersComponent implements OnInit {
       'Server was created! Name is ' + this.serverName;
   }
 
+  onRemoveServer(id: number) {
+    this.servers.splice(id, 1);
+  }
+
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
