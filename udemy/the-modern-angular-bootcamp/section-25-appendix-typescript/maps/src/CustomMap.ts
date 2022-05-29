@@ -11,17 +11,10 @@ export class CustomMap {
     });
   }
 
-  addUserMarker(user: User) {
+  addMarker(mappable: User | Company) {
     new google.maps.Marker({
       map: this.googleMap,
-      position: user.location,
-    });
-  }
-
-  addCompanyMarker(company: Company) {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: company.location,
+      position: mappable.location,
     });
   }
 }
