@@ -1,11 +1,9 @@
 /// <reference types="@types/google.maps" />
 import { Company } from './Company';
+import { CustomMap } from './CustomMap';
 import { User } from './User';
 
 const user = new User();
 const company = new Company();
 
-new google.maps.Map(document.getElementById('map'), {
-  zoom: 13,
-  center: user.location,
-});
+const customMap = new CustomMap('map');
